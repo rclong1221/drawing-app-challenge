@@ -4,30 +4,28 @@ import { BRUSH, STAMP, ERASER } from "../constants/Tools";
 export default function ToolSelector(props) {
 	const { action, tool } = props;
 	return (
-		<div>
-			<div className="radio">
-				<input type="radio" name="tool" id="brush-select"
-					value={BRUSH} 
-					checked={tool === BRUSH} 
-					onChange={ (e) => { action(e.target.value) } } />
-				<label htmlFor="brush-select">Brush</label>
-			</div>
-
-			<div className="radio">
-				<input type="radio" name="tool" id="stamp-select"
-					value={STAMP} 
-					checked={tool === STAMP} 
-					onChange={ (e) => { action(e.target.value) } } />
-				<label htmlFor="stamp-select">Stamp</label>
-			</div>
-
-			<div className="radio">
-				<input type="radio" name="tool" id="eraser-select"
-					value={ERASER} 
-					checked={tool === ERASER} 
-					onChange={ (e) => { action(e.target.value) } } />
-				<label htmlFor="eraser-select">Eraser</label>
-			</div>
+		<div className="tool-container">
+				<button
+					htmlFor="brush-select"
+					className={tool === BRUSH ? "btn btn-brush tool-active" : "btn btn-brush" }
+					onClick={ (e) => { action(BRUSH) } }
+				>
+					Brush
+				</button>
+				<button
+					htmlFor="stamp-select"
+					className={tool === STAMP	 ? "btn btn-stamp tool-active" : "btn btn-stamp" }
+					onClick={ (e) => { action(STAMP) } }
+				>
+					Stamp
+				</button>
+				<button
+					htmlFor="eraser-select"
+					className={tool === ERASER ? "btn btn-eraser tool-active" : "btn btn-eraser" }
+					onClick={ (e) => { action(ERASER) } }
+				>
+					Eraser
+				</button>
 		</div>
 	);
 }
