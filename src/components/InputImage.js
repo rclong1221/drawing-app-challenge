@@ -19,14 +19,14 @@ export default class InputImage extends Component {
 	handleImageChange(e) {
     e.preventDefault();
 		let ext = e.target.files[0].name.substring(e.target.files[0].name.lastIndexOf('.') + 1);
-		if( ext == "gif" ||
-				ext == "GIF" ||
-				ext == "JPEG" ||
-				ext == "jpeg" ||
-				ext == "jpg" ||
-				ext == "JPG" ||
-			  ext == "png" ||
-			  ext == "PNG" )
+		if( ext === "gif" ||
+				ext === "GIF" ||
+				ext === "JPEG" ||
+				ext === "jpeg" ||
+				ext === "jpg" ||
+				ext === "JPG" ||
+			  ext === "png" ||
+			  ext === "PNG" )
 				this.loadImage(e.target.files[0])
 		return;
   }
