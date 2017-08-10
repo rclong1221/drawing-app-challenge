@@ -1,263 +1,226 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
+
 .app {
-	height: 100vh;
-	width: 100vw;
-	font-weight: 300;
-	overflow: hidden;
-}
+  height: 100vh;
+  width: 100vw;
+  font-weight: 300;
+  overflow: hidden; }
+
 .canvas {
-	height: 100vh;
-	width: 100vw;
-}
+  height: 100vh;
+  width: 100vw; }
+
 .sidebar {
-	position: fixed;
-	top:0;
-	right: 0;
-	height: 100vh;
-	background-color: #CB5599;
-	/*background-color: #263238;*/
-}
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #CB5599;
+  /*background-color: #263238;*/ }
+
 .section {
-	/*min-height: 100px;*/
-	width: 100%;
-	color: white;
-}
+  /*min-height: 100px;*/
+  width: 100%;
+  color: white; }
 
 /* Candidate defined styles go here! */
-
-/*@mixin btn-background($bottom-color, $top-color) {
-	background: $bottom-color;
-	background: -webkit-linear-gradient($bottom-color, $top-color);
-	background: -o-linear-gradient($bottom-color, $top-color);
-	background: -moz-linear-gradient($bottom-color, $top-color);
-	background: linear-gradient($bottom-color, $top-color);
-}*/
-
+/*   Variables   */
 /*                   */
 /*	--- Sidebar ---  */
 /*                   */
 .sidebar {
-	width: 190px;
-}
-.sidebar * {
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-}
+  width: 190px; }
 
-/*                   */
+/*   Sidebar Typography   */
+.sidebar * {
+  letter-spacing: 0.5px;
+  text-transform: uppercase; }
+
+/*      General      */
 /*   Sidebar Items   */
 /*                   */
 .section {
-	width: 160px;
-	color: #3c3c3c;
-	margin: 5px 15px 5px 15px;
-}
+  width: 160px;
+  color: #3c3c3c;
+  margin: 5px 15px 5px 15px; }
+
 .section > h3 {
-	margin: 5px 0px 5px 0px;
-}
+  margin: 5px 0px 5px 0px; }
 
 hr {
-  border: 1px solid #3c3c3c;
-}
+  border: 1px solid #3c3c3c; }
+
+/*   Button Background Gradient Mixin   */
+.section--tool-selector div {
+  display: inline-block; }
 
 .btn {
-	background: #979797;
-	background: -webkit-linear-gradient(#979797, grey);
-	background: -o-linear-gradient(#979797, grey);
-	background: -moz-linear-gradient(#979797, grey);
-	background: linear-gradient(#979797, grey);
+  background: #979697;
+  background: -webkit-linear-gradient(#979697, grey);
+  background: -o-linear-gradient(#979697, grey);
+  background: -moz-linear-gradient(#979697, grey);
+  background: linear-gradient(#979697, grey);
+  border: solid 1px #fff;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #3c3c3c;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  text-transform: uppercase; }
 
-	/*@include btn-background(#979697, grey);*/
-
-	border: solid 1px #fff;
-	border-radius: 5px;
-	box-shadow: none;
-	color: #3c3c3c;
-	cursor: pointer;
-	font-weight: bold;
-	outline: none;
-	text-transform: uppercase;
-}
-
-
-
-
-
-.section--tool-selector div {
-	display: inline-block;
-}
 .btn:active, .btn.tool-active {
-	background: grey;
-	background: -webkit-linear-gradient(grey, #979797);
-	background: -o-linear-gradient(grey, #979797);
-	background: -moz-linear-gradient(grey, #979797);
-	background: linear-gradient(grey, #979797);
-
-	/*@include btn-background(grey, #979697);*/
-
-	box-shadow: 0 0 0 2px #3c3c3c;
-}
+  background: grey;
+  background: -webkit-linear-gradient(grey, #979697);
+  background: -o-linear-gradient(grey, #979697);
+  background: -moz-linear-gradient(grey, #979697);
+  background: linear-gradient(grey, #979697);
+  box-shadow: 0 0 0 2px #3c3c3c; }
 
 .number-input {
-	width: 100%;
-}
+  width: 100%; }
+
 .color-input {
-	cursor: pointer;
-	height: 30px;
-	width: 70px;
-}
+  cursor: pointer;
+  height: 30px;
+  width: 70px; }
 
 .file-input-container {
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	vertical-align: middle;
-}
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle; }
+
 input.file-input {
-	background: none;
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
-	color: transparent;
-	cursor: pointer;
-	display: inline-block;
-	filter: alpha(opacity=0);
-	font-size: 20em;
-	height: 100%;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	opacity: 0;
-	width: 100%;
-	vertical-align: middle;
-}
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  filter: alpha(opacity=0);
+  font-size: 20em;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  vertical-align: middle;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0; }
+
 .image-preview {
-	max-width: 100%;
-	max-height: 100%;
-}
+  max-width: 100%;
+  max-height: 100%; }
 
+/*                            */
+/*       Media Queries        */
+/*                            */
+/*   Media queries width <= 1366px   */
+@media all and (max-width: 1366px) {
+  h3 {
+    font-size: 1.1em; }
 
-@media all and (max-width:1366px) {
-	h3 {
-		font-size: 1.1em;
-	}
-	.sidebar {
-		width: 190px;
-	}
-	.section {
-		width: 160px;
-		margin: 5px 15px 5px 15px;
-	}
-	.btn {
-		font-size: 0.6em;
-		padding: 0.45em 0.6em;
-	}
-	.section > div,
-	.number-input,
-	.color-input,
-	.btn-reset,
-	.btn-save,
-	.file-input-container {
-		margin: 0px 0px 5px 0px;
-	}
-	.tool-container > button {
-		margin: 0px 2px 0px 2px;
-	}
-	.tool-container > button:first-child{
-		margin: 0px 2px 0px 0px;
-	}
-	.tool-container > button:last-child {
-		margin: 0px 0px 0px 2px;
-	}
-	.btn:active, .btn.tool-active {
-		box-shadow: 0 0 0 2px #3c3c3c;
-	}
-	.image-preview {
-		margin: 5px 0px 5px 0px;
-	}
-}
+  .sidebar {
+    width: 190px; }
 
-@media all and (min-width:1367px) and (max-width:1440px) {
-	.sidebar {
-		width: 230px;
-	}
-	.section {
-		width: 200px;
-		margin: 7.5px 15px 7.5px 15px;
-	}
-	.btn {
-		font-size: 0.7em;
-		padding: 0.5em 0.75em;
-	}
-	.section > div,
-	.number-input,
-	.color-input,
-	.btn-reset,
-	.btn-save,
-	.file-input-container {
-		margin: 0px 0px 5px 0px;
-	}
-	.tool-container > button {
-		margin: 0px 4px 0px 4px;
-	}
-	.tool-container > button:first-child{
-		margin: 0px 4px 0px 0px;
-	}
-	.tool-container > button:last-child {
-		margin: 0px 0px 0px 4px;
-	}
-	.btn:active, .btn.tool-active {
-		box-shadow: 0 0 0 2px #3c3c3c;
-	}
-	.image-preview {
-		margin: 7.5px 0px 7.5px 0px;
-	}
+  .section {
+    width: 160px;
+    margin: 5px 15px 5px 15px; }
 
-}
-@media all and (min-width:1441px) {
-	.sidebar {
-		width: 280px;
-	}
+  .btn {
+    font-size: 0.6em;
+    padding: 0.45em 0.6em; }
 
-	.section {
-		width: 250px;
-		margin: 10px 15px 10px 15px;
-	}
-	.btn {
-		font-size: 0.85em;
-		padding: 0.55em 0.95em;
-	}
+  .section > div,
+  .number-input,
+  .color-input,
+  .btn-reset,
+  .btn-save,
+  .file-input-container {
+    margin: 0px 0px 5px 0px; }
 
-	.section > div,
-	.number-input,
-	.color-input,
-	.btn-reset,
-	.btn-save,
-	.file-input-container {
-		margin: 0px 0px 10px 0px;
-	}
-	.tool-container > button {
-		margin: 0px 4px 0px 4px;
-	}
-	.tool-container > button:first-child{
-		margin: 0px 4px 0px 0px;
-	}
-	.tool-container > button:last-child {
-		margin: 0px 0px 0px 4px;
-	}
-	.btn:active, .btn.tool-active {
-		box-shadow: 0 0 0 2px #3c3c3c;
-	}
+  .tool-container > button {
+    margin: 0px 2px 0px 2px; }
 
-	.image-preview {
-		margin: 10px 0px 10px 0px;
-	}
-}
+  .tool-container > button:first-child {
+    margin: 0px 2px 0px 0px; }
+
+  .tool-container > button:last-child {
+    margin: 0px 0px 0px 2px; }
+
+  .image-preview {
+    margin: 5px 0px 5px 0px; } }
+/*   Media queries width > 1366px   */
+@media all and (min-width: 1367px) and (max-width: 1440px) {
+  .sidebar {
+    width: 230px; }
+
+  .section {
+    width: 200px;
+    margin: 7.5px 15px 7.5px 15px; }
+
+  .btn {
+    font-size: 0.7em;
+    padding: 0.5em 0.75em; }
+
+  .section > div,
+  .number-input,
+  .color-input,
+  .btn-reset,
+  .btn-save,
+  .file-input-container {
+    margin: 0px 0px 5px 0px; }
+
+  .tool-container > button {
+    margin: 0px 4px 0px 4px; }
+
+  .tool-container > button:first-child {
+    margin: 0px 4px 0px 0px; }
+
+  .tool-container > button:last-child {
+    margin: 0px 0px 0px 4px; }
+
+  .image-preview {
+    margin: 7.5px 0px 7.5px 0px; } }
+/*   Media queries width > 1440px   */
+@media all and (min-width: 1441px) {
+  .sidebar {
+    width: 280px; }
+
+  .section {
+    width: 250px;
+    margin: 10px 15px 10px 15px; }
+
+  .btn {
+    font-size: 0.85em;
+    padding: 0.55em 0.95em; }
+
+  .section > div,
+  .number-input,
+  .color-input,
+  .btn-reset,
+  .btn-save,
+  .file-input-container {
+    margin: 0px 0px 10px 0px; }
+
+  .tool-container > button {
+    margin: 0px 4px 0px 4px; }
+
+  .tool-container > button:first-child {
+    margin: 0px 4px 0px 0px; }
+
+  .tool-container > button:last-child {
+    margin: 0px 0px 0px 4px; }
+
+  .image-preview {
+    margin: 10px 0px 10px 0px; } }
+
+/*# sourceMappingURL=app.css.map */
