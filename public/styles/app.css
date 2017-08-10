@@ -31,7 +31,13 @@
 
 /* Candidate defined styles go here! */
 
-/* Variables*/
+/*@mixin btn-background($bottom-color, $top-color) {
+	background: $bottom-color;
+	background: -webkit-linear-gradient($bottom-color, $top-color);
+	background: -o-linear-gradient($bottom-color, $top-color);
+	background: -moz-linear-gradient($bottom-color, $top-color);
+	background: linear-gradient($bottom-color, $top-color);
+}*/
 
 /*                   */
 /*	--- Sidebar ---  */
@@ -44,6 +50,9 @@
 	text-transform: uppercase;
 }
 
+/*                   */
+/*   Sidebar Items   */
+/*                   */
 .section {
 	width: 160px;
 	color: #3c3c3c;
@@ -57,11 +66,15 @@ hr {
   border: 1px solid #3c3c3c;
 }
 
-h3 {
-	font-size: 1.4em;
-}
-
 .btn {
+	background: #979797;
+	background: -webkit-linear-gradient(#979797, grey);
+	background: -o-linear-gradient(#979797, grey);
+	background: -moz-linear-gradient(#979797, grey);
+	background: linear-gradient(#979797, grey);
+
+	/*@include btn-background(#979697, grey);*/
+
 	border: solid 1px #fff;
 	border-radius: 5px;
 	box-shadow: none;
@@ -70,13 +83,11 @@ h3 {
 	font-weight: bold;
 	outline: none;
 	text-transform: uppercase;
-
-	background: #979797;
-	background: -webkit-linear-gradient(#979797, grey);
-	background: -o-linear-gradient(#979797, grey);
-	background: -moz-linear-gradient(#979797, grey);
-	background: linear-gradient(#979797, grey);
 }
+
+
+
+
 
 .section--tool-selector div {
 	display: inline-block;
@@ -87,6 +98,8 @@ h3 {
 	background: -o-linear-gradient(grey, #979797);
 	background: -moz-linear-gradient(grey, #979797);
 	background: linear-gradient(grey, #979797);
+
+	/*@include btn-background(grey, #979697);*/
 
 	box-shadow: 0 0 0 2px #3c3c3c;
 }
@@ -132,7 +145,10 @@ input.file-input {
 }
 
 
-@media all and (max-width:800px) {
+@media all and (max-width:1366px) {
+	h3 {
+		font-size: 1.1em;
+	}
 	.sidebar {
 		width: 190px;
 	}
@@ -144,7 +160,6 @@ input.file-input {
 		font-size: 0.6em;
 		padding: 0.45em 0.6em;
 	}
-
 	.section > div,
 	.number-input,
 	.color-input,
@@ -154,24 +169,23 @@ input.file-input {
 		margin: 0px 0px 5px 0px;
 	}
 	.tool-container > button {
-		margin: 0px 3px 0px 3px;
+		margin: 0px 2px 0px 2px;
 	}
 	.tool-container > button:first-child{
-		margin: 0px 3px 0px 0px;
+		margin: 0px 2px 0px 0px;
 	}
 	.tool-container > button:last-child {
-		margin: 0px 0px 0px 3px;
+		margin: 0px 0px 0px 2px;
 	}
 	.btn:active, .btn.tool-active {
 		box-shadow: 0 0 0 2px #3c3c3c;
 	}
-
 	.image-preview {
 		margin: 5px 0px 5px 0px;
 	}
 }
 
-@media all and (min-width:801px) and (max-width:1200px) {
+@media all and (min-width:1367px) and (max-width:1440px) {
 	.sidebar {
 		width: 230px;
 	}
@@ -208,7 +222,7 @@ input.file-input {
 	}
 
 }
-@media all and (min-width:1201px) {
+@media all and (min-width:1441px) {
 	.sidebar {
 		width: 280px;
 	}
