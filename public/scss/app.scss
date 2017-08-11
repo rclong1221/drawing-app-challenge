@@ -63,7 +63,7 @@ hr {
   border: 1px solid #3c3c3c;
 }
 
-/*   Button Background Gradient Mixin   */
+//   Button Background Gradient Mixin
 @mixin btn-background($bottom-color, $top-color) {
 	background: $bottom-color;
 	background: -webkit-linear-gradient($bottom-color, $top-color);
